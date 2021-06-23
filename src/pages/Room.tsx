@@ -1,5 +1,8 @@
-import { useState } from "react";
+import { FormEvent, useState } from "react";
 import { useParams } from "react-router";
+// toast notify
+import { showToastNotify } from "../notify/toast";
+
 import logoImg from "../assets/images/logo.svg";
 
 import { Button } from "../components/Button";
@@ -17,13 +20,18 @@ export function Room() {
     const user = useAuth();
     const roomId = params.id;
 
-    async function handleCreateNewQuestion() {
+    async function handleCreateNewQuestion(event: FormEvent) {
+        event.preventDefault();
         if (newQuestion.trim() === "") {
+            showToastNotify("Corpo da pergunta não pode estar vazio!", "erro");
             return;
         }
 
         if (!user) {
-            alert("Faça Login");
+            showToastNotify(
+                "É necessárop fazer login para enviar perguntas!",
+                "erro"
+            );
             return;
         }
     }
