@@ -1,29 +1,30 @@
 .button {
-    height: 50px;
-    border-radius: 8px;
-    font-weight: 500;
-    background: #835af2;
-    color: #fff;
-    padding: 0 32px;
+    height: 50px !important;
+    border-radius: 8px !important;
+    font-weight: 700 !important;
+    background: #835af2 !important;
+    color: #fff !important;
+    text-decoration: none !important;
+    padding: 0 32px !important;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
 
-    cursor: pointer;
-    border: 0;
-    transition: filter 0.2s;
+    cursor: pointer !important;
+    border: 0 !important;
+    transition: filter 0.2s !important;
 
     img {
-        margin-right: 8px;
+        margin-right: 8px !important;
     }
 
     &:not(:disabled):hover {
-        filter: brightness(0.9);
+        filter: brightness(0.9) !important;
     }
 
     &:disabled {
-        opacity: 0.6;
-        cursor: not-allowed;
+        opacity: 0.6 !important;
+        cursor: not-allowed !important;
     }
 }
